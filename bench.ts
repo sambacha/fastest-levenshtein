@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable no-console */
 const Benchmark = require("benchmark");
-import { distance } from "./mod.js";
+import { distance } from "./build/index.js";
 import { get as fastLevenshtein } from "fast-levenshtein";
 const fs = require("fs");
 const jslevenshtein = require("js-levenshtein");
@@ -25,6 +25,7 @@ const randomstringArr = (stringSize, arraySize) => {
   let i = 0;
   const arr = [];
   for (i = 0; i < arraySize; i++) {
+    // @ts-ignore
     arr.push(randomstring(stringSize));
   }
   return arr;

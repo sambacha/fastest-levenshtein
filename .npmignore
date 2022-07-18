@@ -8,3 +8,5 @@ data.json
 bench.ts
 mod.ts
 tsconfig.json
+artifact/
+build/
