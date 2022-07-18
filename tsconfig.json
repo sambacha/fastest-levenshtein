@@ -1,13 +1,42 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "target": "ES2015",
-    "module": "commonjs",
+    "allowSyntheticDefaultImports": false,
+    "esModuleInterop": false,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "removeComments": true,
+    "incremental": true,
+    "tsBuildInfoFile": "./",
+    "preserveValueImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowUnreachableCode": false,
+    "strictPropertyInitialization": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "isolatedModules": true,
     "declaration": true,
-    "declarationMap": true,
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "sourceMap": false,
+    "module": "node16",
+    "moduleResolution": "node16",
+    "moduleDetection": "force",
+    "target": "ESNext",
+    "rootDir": ".",
+    "outDir": "./build",
+    "types": [],
+    "plugins": [
+      {
+        "name": "typescript-eslint-language-service"
+      }
+    ]
   },
-  "include": ["./mod.ts"]
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/.*/",
+    "src/**/*.test.ts"
+  ]
 }

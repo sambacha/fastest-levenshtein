@@ -1,0 +1,117 @@
+from: 23:34:35
+to: 23:40:21
+$ npm run bench
+
+> fastest-levenshtein@1.0.12 bench
+> npx tsc bench.ts && node bench.js
+
+0 - js-levenshtein x 26,421 ops/sec ±0.64% (91 runs sampled)
+0 - leven x 23,512 ops/sec ±0.49% (87 runs sampled)
+0 - fast-levenshtein x 21,402 ops/sec ±0.45% (91 runs sampled)
+0 - levenshtein-edit-distance x 29,868 ops/sec ±0.57% (88 runs sampled)
+0 - fastest-levenshtein x 38,935 ops/sec ±0.87% (86 runs sampled)
+1 - js-levenshtein x 12,005 ops/sec ±0.43% (89 runs sampled)
+1 - leven x 8,291 ops/sec ±0.62% (90 runs sampled)
+1 - fast-levenshtein x 6,791 ops/sec ±0.51% (88 runs sampled)
+1 - levenshtein-edit-distance x 8,364 ops/sec ±0.85% (91 runs sampled)
+1 - fastest-levenshtein x 20,129 ops/sec ±0.45% (88 runs sampled)
+2 - js-levenshtein x 3,625 ops/sec ±0.48% (89 runs sampled)
+2 - leven x 1,846 ops/sec ±0.46% (91 runs sampled)
+2 - fast-levenshtein x 1,699 ops/sec ±0.55% (90 runs sampled)
+2 - levenshtein-edit-distance x 1,813 ops/sec ±0.66% (89 runs sampled)
+2 - fastest-levenshtein x 10,467 ops/sec ±0.51% (88 runs sampled)
+3 - js-levenshtein x 1,005 ops/sec ±0.56% (88 runs sampled)
+3 - leven x 504 ops/sec ±0.36% (88 runs sampled)
+3 - fast-levenshtein x 457 ops/sec ±0.30% (89 runs sampled)
+3 - levenshtein-edit-distance x 496 ops/sec ±0.51% (86 runs sampled)
+3 - fastest-levenshtein x 4,966 ops/sec ±0.81% (87 runs sampled)
+4 - js-levenshtein x 278 ops/sec ±0.34% (86 runs sampled)
+4 - leven x 139 ops/sec ±0.31% (76 runs sampled)
+4 - fast-levenshtein x 124 ops/sec ±0.34% (76 runs sampled)
+4 - levenshtein-edit-distance x 137 ops/sec ±0.30% (75 runs sampled)
+4 - fastest-levenshtein x 1,266 ops/sec ±0.79% (89 runs sampled)
+5 - js-levenshtein x 73.02 ops/sec ±0.34% (71 runs sampled)
+5 - leven x 37.08 ops/sec ±0.32% (62 runs sampled)
+5 - fast-levenshtein x 32.10 ops/sec ±0.36% (55 runs sampled)
+5 - levenshtein-edit-distance x 35.92 ops/sec ±0.56% (60 runs sampled)
+5 - fastest-levenshtein x 372 ops/sec ±0.60% (87 runs sampled)
+6 - js-levenshtein x 18.84 ops/sec ±0.39% (49 runs sampled)
+6 - leven x 9.09 ops/sec ±1.64% (26 runs sampled)
+6 - fast-levenshtein x 7.89 ops/sec ±1.18% (24 runs sampled)
+6 - levenshtein-edit-distance x 8.90 ops/sec ±1.60% (26 runs sampled)
+6 - fastest-levenshtein x 104 ops/sec ±0.97% (73 runs sampled)
+7 - js-levenshtein x 4.61 ops/sec ±1.77% (16 runs sampled)
+7 - leven x 2.30 ops/sec ±1.58% (10 runs sampled)
+7 - fast-levenshtein x 1.97 ops/sec ±1.51% (9 runs sampled)
+7 - levenshtein-edit-distance x 2.18 ops/sec ±2.70% (10 runs sampled)
+7 - fastest-levenshtein x 25.56 ops/sec ±1.86% (45 runs sampled)
+8 - js-levenshtein x 1.13 ops/sec ±3.76% (7 runs sampled)
+8 - leven x 0.57 ops/sec ±3.17% (6 runs sampled)
+8 - fast-levenshtein x 0.49 ops/sec ±1.51% (6 runs sampled)
+8 - levenshtein-edit-distance x 0.56 ops/sec ±1.93% (6 runs sampled)
+8 - fastest-levenshtein x 7.06 ops/sec ±1.26% (22 runs sampled)
+Map(9) {
+  '0' => [
+    26421.066096472146,
+    23511.85151027326,
+    21402.02004208457,
+    29868.33982507418,
+    38934.532261275555
+  ],
+  '1' => [
+    12004.645217755757,
+    8291.12254212841,
+    6791.173571764683,
+    8363.79653347237,
+    20129.46120991693
+  ],
+  '2' => [
+    3624.889544355349,
+    1845.820957536858,
+    1698.6596645527784,
+    1812.854575745738,
+    10467.481570991498
+  ],
+  '3' => [
+    1004.9561942572673,
+    504.00280587525714,
+    456.78465966373926,
+    496.32155205717635,
+    4966.165671854165
+  ],
+  '4' => [
+    277.76613279922134,
+    139.3726553361689,
+    123.5305226119743,
+    136.5568419493296,
+    1266.1197125998065
+  ],
+  '5' => [
+    73.02170407320318,
+    37.076145305046914,
+    32.10220822927693,
+    35.924427061699916,
+    371.77737704777445
+  ],
+  '6' => [
+    18.838229421774543,
+    9.089483917037443,
+    7.88908694532974,
+    8.899653355831894,
+    103.98930505230442
+  ],
+  '7' => [
+    4.608214973302236,
+    2.295793797048415,
+    1.974084058654917,
+    2.1814451776971264,
+    25.563158926156483
+  ],
+  '8' => [
+    1.128311629812645,
+    0.5682674596396576,
+    0.49231257992639355,
+    0.5550251878755637,
+    7.055908370680744
+  ]
+}

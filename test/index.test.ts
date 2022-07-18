@@ -1,6 +1,6 @@
-const { closest, distance } = require("./mod.js");
+const { closest, distance } = require("./build/index.js");
 
-const levenshtein = (a, b) => {
+const levenshtein = (a: string, b: string) => {
   if (a.length === 0) {
     return b.length;
   }
@@ -14,7 +14,7 @@ const levenshtein = (a, b) => {
     b = tmp;
   }
 
-  const row = [];
+  const row: Array<number> = [];
   for (let i = 0; i <= a.length; i++) {
     row[i] = i;
   }
@@ -23,11 +23,7 @@ const levenshtein = (a, b) => {
     let prev = i;
     for (let j = 1; j <= a.length; j++) {
       let val = 0;
-      if (b.charAt(i - 1) === a.charAt(j - 1)) {
-        val = row[j - 1];
-      } else {
-        val = Math.min(row[j - 1] + 1, prev + 1, row[j] + 1);
-      }
+      val = b.charAt(i - 1) === a.charAt(j - 1) ? row[j - 1] : Math.min(row[j - 1] + 1, prev + 1, row[j] + 1);
       row[j - 1] = prev;
       prev = val;
     }
@@ -37,7 +33,7 @@ const levenshtein = (a, b) => {
   return row[a.length];
 };
 
-const makeid = (length) => {
+const makeid = (length: number) => {
   let result = "";
   const characters =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
